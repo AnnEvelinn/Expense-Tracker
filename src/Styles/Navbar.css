@@ -1,0 +1,94 @@
+:root {
+  --primary-color: #7d5ba6;   /* pastel purple */
+  --secondary-color: #a6c1ee; /* pastel blue */
+  --bg-color: #fef9f5;        /* off-white */
+  --text-color: #555;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--bg-color);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-radius: 12px;
+  max-width: 1200px;
+  margin: 1rem auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Logo */
+.Logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-align: center;
+  flex: 0 0 auto;
+}
+
+/* Links container */
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+}
+
+/* Each link */
+.nav-links li {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border-radius: 50px; /* pill shape hover */
+}
+
+/* Hover: subtle blue highlight + shadow */
+.nav-links li a:hover {
+  color: var(--primary-color);
+  box-shadow: 0 4px 12px rgba(166, 193, 238, 0.2);
+  background: rgba(166, 193, 238, 0.1);
+}
+
+/* Active link: pastel purple pill */
+.nav-links li.active a {
+  color: #fff;
+  background-color: var(--primary-color);
+  box-shadow: 0 4px 12px rgba(125, 91, 166, 0.3);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links li a {
+    width: 100%;
+    text-align: center;
+  }
+}
