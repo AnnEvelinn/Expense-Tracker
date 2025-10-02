@@ -4,6 +4,7 @@ import Dashboard from './Pages/Dashboard';
 import Transaction from './Pages/Transaction';
 import Report from './Pages/Report';
 import Navbar from './Components/Navbar';
+import NotFound from './Pages/NotFound';
 function App() {
  return (
   <BrowserRouter>
@@ -13,6 +14,8 @@ function App() {
 <Route path="/" element={<Dashboard/>} />
 <Route path="/transaction" element={<Transaction/>} />
 <Route path="/report" element={<Report/>} />
+<Route path="*" element={<NotFound/>} />
+
   </Routes>
 </div>
   </BrowserRouter>
